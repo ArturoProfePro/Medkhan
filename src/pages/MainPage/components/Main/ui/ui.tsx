@@ -1,37 +1,46 @@
-import c from './ui.module.scss'
+import c from './ui.module.scss';
 
 const Main = () => {
+  return (
+    <div className={c.container}>
+      <div className={c.geo}>
+        <img src="/geolocation.svg" alt="" className={c.logo} />
 
-    return (
-        <div className={c.container}>
+        <span className={c.text}>
+          Набережные Челны, 52-й комплекс, 20А
+          <br /> Район Автозаводский
+        </span>
+      </div>
 
-            <div className={c.geo}>
-                <img src="/geolocation.svg" alt="" className={c.logo} />
+      <div className={c.below} />
+      <div className={c.green} />
 
-                <span className={c.text}>Набережные Челны, 52-й комплекс, 20А<br /> Район Автозаводский</span>
-            </div>
+      <div className={c.bg}>
+        <span className={c.ceil}>
+          Гинекология
+          <br />
+          высшего класса
+        </span>
 
-            <div className={c.below} />
-            <div className={c.green} />
+        <span className={c.text}>
+          Лазерное интимное
+          <br />
+          омоложение
+          <br />
+          <br /> Оперативная гинекология
+        </span>
 
-            <div className={c.bg}>
-                <span className={c.ceil}>
-                    Гинекология<br />высшего класса
-                </span>
+        <button className={c.button}>
+          Узнать больше
+          <img src="/arrow-right.svg" className={c.arrow} alt="" />
+        </button>
 
-                <span className={c.text}>Лазерное интимное<br />омоложение<br /><br /> Оперативная гинекология</span>
+        <img src="/woman.svg" className={c.woman} alt="" />
+        <img src="/woman-bg.svg" alt="" className={c.womanBg} />
+        <img src="/tuman.svg" className={c.tuman} alt="" />
+      </div>
+    </div>
+  );
+};
 
-                <button className={c.button}>
-                    Узнать больше
-                    <img src="/arrow-right.svg" className={c.arrow} alt="" />
-                </button>
-
-                <img src="/woman.svg" className={c.woman} alt="" />
-                <img src="/woman-bg.svg" alt="" className={c.womanBg} />
-                <img src="/tuman.svg" className={c.tuman} alt="" />
-            </div>
-        </div>
-    )
-}
-
-export default Main
+export default Main;
