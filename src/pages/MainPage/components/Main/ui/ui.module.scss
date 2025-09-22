@@ -4,19 +4,21 @@
   height: 568px;
   width: 100%;
   align-items: flex-end;
+  overflow-x: hidden;
 
   .geo {
     height: 85px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    width: 420px;
+    gap: 10px;
+    width: 40%;
     background-color: white;
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 6;
+    z-index: 20;
     border-radius: 0 0 20px 0;
+    overflow: hidden;
 
     .text {
       color: gray;
@@ -117,7 +119,11 @@
     }
   }
 }
-
+@media (max-width: 500px) {
+  .text {
+    font-size: 10px;
+  }
+}
 @media (max-width: 375px) {
   .container {
     .geo {
