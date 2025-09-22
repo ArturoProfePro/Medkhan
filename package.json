@@ -3,24 +3,24 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ArturoProfePro/github.io/Medkhan"
+  "homepage": "https://ArturoProfePro/github.io/Medkhan",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router": "^7.9.1",
-    "react-transition-group": "^4.4.5",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
     "@types/react-transition-group": "^4.4.12",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
