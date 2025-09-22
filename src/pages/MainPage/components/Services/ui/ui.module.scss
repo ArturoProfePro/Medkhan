@@ -148,6 +148,7 @@
       }
 
       .abs {
+        width: 400px;
         position: absolute;
         top: 29px;
         right: 27px;
@@ -164,15 +165,6 @@
 .absFake {
   display: none;
 }
-// @media (max-width: 500px) {
-//   .absFake {
-//     display: block;
-//     position: absolute;
-//     z-index: 6;
-//     right: 0;
-//     bottom: 0;
-//   }
-// }
 
 .buttons {
   display: flex;
@@ -218,7 +210,13 @@
     }
   }
 }
-
+.iconDnk {
+  z-index: 1;
+  position: absolute;
+  right: 4%;
+  top: 0;
+  z-index: 3;
+}
 @media (max-width: 1024px) {
   .container {
     .grid {
@@ -231,19 +229,20 @@
   }
 }
 
-@media (max-width: 520px) {
-  .container {
-    .grid {
-      .elem7 {
-        .abs {
-          width: 150px;
-        }
-      }
-    }
+@media (max-width: 365px) {
+  .abs {
+    display: none;
+  }
+  .iconDnk {
+    height: 150px;
+    transform: translateX(150px);
+  }
+  .mask {
+    transform: translateX(-500px);
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 765px) {
   .container {
     .header {
       .title {
@@ -326,6 +325,7 @@
         }
 
         .abs {
+          width: 200px;
           position: absolute;
           top: 29px;
           right: 27px;

@@ -38,14 +38,12 @@ const Services = () => {
         </div>
         <div className={c.elem7}>
           <span className={c.title}>
-            <div className={c.mal}>CHECK UP</div> <br />
+            <div className={c.mal}>CHECK UP</div>
             Комплексное обследование
           </span>
 
           <span className={c.absFake}>
-            Удобное и эффективное решение
-            <br />
-            для заботы о здоровье
+            Удобное и эффективное решение для заботы о здоровье
           </span>
 
           <div className={c.buttons}>
@@ -53,13 +51,11 @@ const Services = () => {
             <button className={c.second}>Подробнее</button>
           </div>
 
-          <img src="/dnk.png" className={c.icon} alt="" />
+          <img src="/dnk.png" className={c.iconDnk} alt="" />
           <img src="/dnk-mask.png" className={c.mask} alt="" />
 
           <span className={c.abs}>
-            Удобное и эффективное решение
-            <br />
-            для заботы о здоровье
+            Удобное и эффективное решение для заботы о здоровье
           </span>
         </div>
       </div>
