@@ -20,9 +20,11 @@
 
   .nav {
     display: flex;
-
+    align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    width: 100%;
+    gap: 10px;
+    justify-content: space-around;
 
     .elem {
       color: black;
@@ -85,7 +87,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   .container {
     align-items: center;
 
