@@ -8,7 +8,9 @@ const Header = () => {
 
   return (
     <div className={c.container}>
-      <img src="/logo.svg" className={c.logo} alt="" />
+      <Link to="/">
+        <img src="/logo.svg" className={c.logo} alt="" />
+      </Link>
 
       <span className={c.phone}>+7 (901) 143-34-34</span>
 
