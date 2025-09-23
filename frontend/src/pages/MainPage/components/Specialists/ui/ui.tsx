@@ -7,7 +7,6 @@ const Specialists = () => {
         <span className={c.title}>Команда специалистов</span>
 
         <div className={c.button}>
-          Все специалисты
           <img src="/arrow-right-black.svg" alt="" />
         </div>
       </div>
