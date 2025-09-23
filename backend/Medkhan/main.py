@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from loguru import logger
 
-from Medkhan.admin.setup import setup_admin
+from Medkhan.admin import setup_admin
 from Medkhan.db import db_lifetime
 from Medkhan.middleware import add_middleware
 from Medkhan.routes import base_router

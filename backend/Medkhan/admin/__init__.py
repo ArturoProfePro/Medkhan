@@ -1,8 +1,7 @@
 from sqladmin import Admin
 from fastapi import FastAPI
 
-# Импортируйте ваши классы ModelView
-from .views import DoctorAdmin
+from .doctor import DoctorAdmin
 
 
 async def setup_admin(app: FastAPI):
