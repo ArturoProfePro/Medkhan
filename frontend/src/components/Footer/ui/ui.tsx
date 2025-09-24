@@ -49,11 +49,11 @@ const Footer = () => {
 
           <div className={c.blocks}>
             <div className={c.block}>
-              <span className={c.title3}>4.9</span>
+              <p className={c.title3}>4.9</p>
               <img src="/yandex.png" alt="" />
             </div>
             <div className={c.block}>
-              <span className={c.title3}>4.7</span>
+              <p className={c.title3}>4.7</p>
               <img src="/2gis.png" alt="" />
             </div>
           </div>
