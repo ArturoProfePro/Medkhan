@@ -18,8 +18,3 @@ class Checkup(Base):
         index=True,
         default=uuid4,
     )
-
-    created_at = sa.Column(
-        sa.DateTime(timezone=True), server_default=func.now()
-    )
-    updated_at = sa.Column(sa.DateTime(timezone=True), onupdate=func.now())

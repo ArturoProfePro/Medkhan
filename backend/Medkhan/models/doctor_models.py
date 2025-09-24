@@ -33,6 +33,6 @@ class Doctor(Base):
     work_experience: Mapped[str] = mapped_column(sa.String)
     education: Mapped[str] = mapped_column(sa.String)
 
-    image_path: Mapped[str | None] = mapped_column(sa.String)
+    image_url: Mapped[str | None] = mapped_column(sa.String)
 
     online_booking_link: Mapped[str | None] = mapped_column(sa.String)

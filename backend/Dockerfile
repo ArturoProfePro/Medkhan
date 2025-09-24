@@ -25,4 +25,6 @@ COPY --from=builder --chown=app:app /app /app
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
 CMD ["python3.12", "-m", "Medkhan"]
