@@ -24,7 +24,7 @@ class BaseSettings(PydanticBaseSettings):
 class DBSettings(BaseSettings):
     """Configuration for MySQL connection."""
 
-    host: str = "localhost"
+    host: str = "192.168.0.13"
     port: int = 3306
     user: str = "root"
     password: SecretStr = SecretStr("13132424")
