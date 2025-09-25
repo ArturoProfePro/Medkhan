@@ -14,10 +14,10 @@ class CheckupDTO(BaseOrmModel):
     name: str
     description: str
     original_price: int
-    discounted_price: int
-    gender: enums.GenderEnum
+    discounted_price: int | None
+    gender: enums.GenderEnum | None
     checkup_type: enums.CheckupType
-    expired_at: datetime | None
+    expired_at: str | None
     discount_percentage: int
 
 

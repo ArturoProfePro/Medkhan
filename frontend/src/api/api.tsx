@@ -4,7 +4,7 @@ import { Doctor, DoctorResponse } from '../Interface/Doctor.interface';
 
 export const fetchDoctors = async (): Promise<DoctorResponse> => {
   const res = await axios.get<DoctorResponse>(
-    'http://localhost:8000/api/v1/doctors/'
+    'http://91.147.93.29:8000/api/v1/doctors/'
   );
   return res.data;
 };
@@ -16,7 +16,7 @@ export const fetchDoctor = async (id: string): Promise<DoctorResponse> => {
 
 export const fetchCheckUps = async (): Promise<CheckUpResponse> => {
   const res = await axios.get<CheckUpResponse>(
-    'http://localhost:8000/api/v1/checkups/'
+    'http://91.147.93.29:8000/api/v1/checkups/'
   );
   return res.data;
 };

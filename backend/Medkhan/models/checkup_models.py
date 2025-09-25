@@ -1,3 +1,4 @@
+from datetime import datetime
 from alembic.util import memoized_property
 import sqlalchemy as sa
 from sqlalchemy.orm import Mapped, mapped_column
@@ -20,9 +21,16 @@ class Checkup(Base):
     original_price: Mapped[int] = mapped_column(sa.DECIMAL(10, 2))
     discounted_price: Mapped[int | None] = mapped_column(sa.DECIMAL(10, 2))
     gender: Mapped[GenderEnum | None] = mapped_column(
-        sa.Enum(GenderEnum, name="gender_enum", create_type=True),
+        sa.Enum(
+            GenderEnum,
+            name="gender_enum",
+            create_type=True,
+        ),
         nullable=True,
+        default=GenderEnum.general,
     )
     checkup_type: Mapped[CheckupType] = mapped_column(sa.Enum(CheckupType))
-    expired_at = sa.Column(sa.DateTime(timezone=True))
-    discount_percentage: Mapped[int | None] = mapped_column(sa.Integer)
+
+    expired_at: Mapped[str | None] = mapped_column(sa.String(10))
+
+    discount_percentage: Mapped[int] = mapped_column(sa.Integer)

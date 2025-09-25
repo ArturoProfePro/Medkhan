@@ -9,6 +9,6 @@ class GenderEnum(StrEnum):
 
 
 class CheckupType(StrEnum):
-    first = "FIRST"
+    first = "THIRD"
     secondary = "SECONDARY"
-    third = "THIRD"
+    third = "FIRST"
