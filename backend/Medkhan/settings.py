@@ -74,7 +74,7 @@ class Settings(BaseSettings):
     """Main settings."""
 
     env: str = "local"
-    host: str = "localhost"
+    host: str = "0.0.0.0"
     port: int = 8000
     workers: int = 1
     log_level: str = "info"

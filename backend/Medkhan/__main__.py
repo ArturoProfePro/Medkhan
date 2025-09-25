@@ -5,7 +5,7 @@ if __name__ == "__main__":
 
     uvicorn.run(
         "Medkhan.main:get_app",
-        host=settings.host,
+        host="0.0.0.0",
         port=settings.port,
         log_level=settings.log_level,
         reload=settings.reload,
