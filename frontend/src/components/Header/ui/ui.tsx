@@ -30,6 +30,9 @@ const Header = () => {
         <Link to="/contacts" className={c.elem}>
           Контакты
         </Link>
+        <Link to="/health-magazine" className={c.elem}>
+          Журнал о здоровье
+        </Link>
       </nav>
 
       <button className={c.button}>Записаться</button>

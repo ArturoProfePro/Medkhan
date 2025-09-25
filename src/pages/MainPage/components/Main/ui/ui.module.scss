@@ -113,7 +113,6 @@
 
     .tuman {
       position: absolute;
-      height: 100%;
       z-index: 6;
       right: 0;
       bottom: 0;
@@ -125,13 +124,9 @@
     font-size: 10px;
   }
 }
-@media (max-width: 765px) {
-  .tuman {
-    display: none;
-  }
+@media (max-width: 375px) {
   .container {
     .geo {
-      width: 100%;
       .text {
         font-size: 10px;
       }
@@ -216,18 +211,18 @@
     }
   }
 }
-// @media (max-width: 765px) {
-//   .woman {
-//     height: 500px;
-//     transform: translateX(70px);
-//   }
+@media (max-width: 765px) {
+  .woman {
+    height: 500px;
+    transform: translateX(70px);
+  }
 
-//   .womanBg {
-//     width: 100%;
-//     height: 50%;
-//   }
+  .womanBg {
+    width: 100%;
+    height: 50%;
+  }
 
-//   .tuman {
-//     display: none;
-//   }
-// }
+  .tuman {
+    display: none;
+  }
+}

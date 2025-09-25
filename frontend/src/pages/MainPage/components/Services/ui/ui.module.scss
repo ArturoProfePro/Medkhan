@@ -143,16 +143,18 @@
 
       .mask {
         position: absolute;
+
         top: -15px;
-        z-index: 2;
+        z-index: -2;
       }
 
       .abs {
-        width: 400px;
+        width: 250px;
         position: absolute;
         top: 29px;
         right: 27px;
         color: rgb(85, 85, 85);
+        z-index: 20;
       }
     }
   }
@@ -192,8 +194,9 @@
   }
 
   .second {
-    border: 3px solid rgb(85, 85, 85);
-    color: rgb(85, 85, 85);
+    border: 3px solid rgba(85, 85, 85, 0.673);
+    color: rgba(85, 85, 85, 0.673);
+    background-color: transparent;
     font-size: 25px;
     font-weight: 500;
     width: 179px;
@@ -213,11 +216,14 @@
 .iconDnk {
   z-index: 1;
   position: absolute;
-  right: 4%;
+  right: 15%;
   top: 0;
-  z-index: 3;
+  z-index: -1;
 }
 @media (max-width: 1024px) {
+  .mask {
+    transform: translateX(-300px);
+  }
   .container {
     .grid {
       .elem {
@@ -236,8 +242,10 @@
   .iconDnk {
     height: 150px;
     transform: translateX(150px);
+    z-index: 20;
   }
   .mask {
+    z-index: -2;
     transform: translateX(-500px);
   }
 }
@@ -321,7 +329,8 @@
         .mask {
           position: absolute;
           top: -15px;
-          z-index: 2;
+          left: -160px;
+          z-index: -2;
         }
 
         .abs {

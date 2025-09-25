@@ -50,11 +50,11 @@ const Footer = () => {
           <div className={c.blocks}>
             <div className={c.block}>
               <p className={c.title3}>4.9</p>
-              <img src="/yandex.png" alt="" />
+              <img className={c.infoImg} src="/yandex.png" alt="" />
             </div>
             <div className={c.block}>
               <p className={c.title3}>4.7</p>
-              <img src="/2gis.png" alt="" />
+              <img className={c.infoImg} src="/2gis.png" alt="" />
             </div>
           </div>
         </div>

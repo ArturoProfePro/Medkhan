@@ -1,6 +1,6 @@
 import { useDoctors } from '../../../../../hooks/useDoctors';
 import c from './ui.module.scss';
-
+import { Link } from 'react-router';
 export const AllDoctors = () => {
   const { data, isLoading, error } = useDoctors();
 
@@ -13,7 +13,9 @@ export const AllDoctors = () => {
       {data.data.map((d) => (
         <div key={d.id} className={c.doctorCard}>
           <div className={c.doctorPhoto}>
-            <img src={d.image_url} alt={d.full_name} />
+            <Link to={`/specialist-page/${d.id}`}>
+              <img src={d.image_url} alt={d.full_name} />
+            </Link>
             <p className={c.doctorExperience}>Стаж {d.work_experience} лет</p>
           </div>
 

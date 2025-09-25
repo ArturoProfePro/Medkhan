@@ -1,0 +1,87 @@
+.card {
+  /* Свойство для сетки */
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+
+  /* Уникальные стили для этой карточки */
+  background-color: #e0f7f3;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media (max-width: 768px) {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 24px;
+  }
+}
+
+.leftContent {
+  padding: 24px 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  img {
+    margin-left: 12px;
+  }
+
+  & > div {
+    align-items: flex-start;
+  }
+}
+
+.middle {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.rightImage {
+  position: relative;
+  height: 100%;
+  width: 50%;
+
+  img.girl {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  img.bgGirl {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 200px;
+
+    img.girl {
+      position: static;
+      object-fit: contain;
+      max-height: 100%;
+      width: auto;
+    }
+  }
+}

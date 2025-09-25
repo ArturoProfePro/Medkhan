@@ -38,19 +38,39 @@ const Storm: React.FC<StormProps> = ({ isOpen, setOpen }) => {
         </div>
 
         <nav className={c.nav}>
-          <Link to="/services" className={c.elem}>
+          <Link
+            to="/services"
+            onClick={() => setOpen((prev: boolean) => !prev)}
+            className={c.elem}
+          >
             Услуги
           </Link>
-          <Link to="/stock" className={c.elem}>
+          <Link
+            to="/stock"
+            onClick={() => setOpen((prev: boolean) => !prev)}
+            className={c.elem}
+          >
             Акции
           </Link>
-          <Link to="/specialists" className={c.elem}>
+          <Link
+            to="/specialists"
+            onClick={() => setOpen((prev: boolean) => !prev)}
+            className={c.elem}
+          >
             Специалисты
           </Link>
-          <Link to="/reviews" className={c.elem}>
+          <Link
+            to="/reviews"
+            onClick={() => setOpen((prev: boolean) => !prev)}
+            className={c.elem}
+          >
             Отзывы
           </Link>
-          <Link to="/contacts" className={c.elem}>
+          <Link
+            to="/contacts"
+            onClick={() => setOpen((prev: boolean) => !prev)}
+            className={c.elem}
+          >
             Контакты
           </Link>
         </nav>

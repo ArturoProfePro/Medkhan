@@ -1,4 +1,4 @@
-interface Doctor {
+export interface Doctor {
   id: string;
   full_name: string;
   experience_years: number;

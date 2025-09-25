@@ -86,9 +86,9 @@
 
 .list {
   display: flex;
-  gap: 16px; /* расстояние между карточками */
-  overflow-x: auto; /* включаем горизонтальный скролл */
-  scroll-snap-type: x mandatory; /* плавное "прилипание" */
+  gap: 16px; 
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory;
   padding: 10px;
 }
 .block {

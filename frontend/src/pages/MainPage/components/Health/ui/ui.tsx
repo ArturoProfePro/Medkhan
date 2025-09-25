@@ -7,10 +7,11 @@ const Health = () => {
       <div className={c.header}>
         <span className={c.title}>Журнал о здоровье</span>
 
-        <Link to="/health-magazine" className={c.button}>
-          {' '}
-          <img src="/arrow-right-black.svg" />
-        </Link>
+        <>
+          <Link to="/health-magazine" className={c.button}>
+            <img src="/arrow-right-black.svg" />
+          </Link>
+        </>
       </div>
 
       <div className={c.grid}>

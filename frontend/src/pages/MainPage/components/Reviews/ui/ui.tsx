@@ -1,5 +1,5 @@
 import c from './ui.module.scss';
-
+import { Link } from 'react-router';
 const Reviews = () => {
   return (
     <div className={c.container}>
@@ -8,7 +8,9 @@ const Reviews = () => {
 
         <div className={c.buttons}>
           <button className={c.green}>Оставить отзыв</button>
-          <img className={c.button} src="/arrow-right-black.svg" />
+          <Link rel="stylesheet" to="/reviews" className={c.link}>
+            <img className={c.button} src="/arrow-right-black.svg" />
+          </Link>
         </div>
       </div>
 

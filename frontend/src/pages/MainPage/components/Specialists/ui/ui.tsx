@@ -1,13 +1,15 @@
 import c from './ui.module.scss';
-
+import { Link } from 'react-router';
 const Specialists = () => {
   return (
     <div className={c.container}>
       <div className={c.header}>
         <span className={c.title}>Команда специалистов</span>
 
-        <div className={c.button}>
-          <img src="/arrow-right-black.svg" alt="" />
+        <div className="button">
+          <Link rel="stylesheet" to="/specialists" className={c.link}>
+            <img src="/arrow-right-black.svg" alt="" />
+          </Link>
         </div>
       </div>
 
