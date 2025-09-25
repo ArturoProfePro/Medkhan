@@ -5,14 +5,12 @@ from fastapi import APIRouter
 from Medkhan.daos import GetDAOs
 from Medkhan.dtos import (
     DataResponse,
-    EmptyResponse,
     OffsetResults,
     Pagination,
 )
 from Medkhan.dtos.contact_request_dtos import (
     ContactRequestDTO,
     ContactRequestInputDTO,
-    ContactRequestUpdateDTO,
 )
 
 router = APIRouter(prefix="/contact-requests")
@@ -26,27 +24,6 @@ async def create_contact_request(
     """Create a new ContactRequest."""
     created_obj = await daos.contact_request.create(input_dto)
     return DataResponse(data=ContactRequestDTO.model_validate(created_obj))
-
-
-@router.patch("/{contact_request_id}")
-async def update_contact_request(
-    contact_request_id: UUID,
-    update_dto: ContactRequestUpdateDTO,
-    daos: GetDAOs,
-) -> EmptyResponse:
-    """Update ContactRequest."""
-    await daos.contact_request.update(contact_request_id, update_dto)
-    return EmptyResponse()
-
-
-@router.delete("/{contact_request_id}")
-async def delete_contact_request(
-    contact_request_id: UUID,
-    daos: GetDAOs,
-) -> EmptyResponse:
-    """Delete a ContactRequest by id."""
-    await daos.contact_request.delete(id=contact_request_id)
-    return EmptyResponse()
 
 
 @router.get("/")

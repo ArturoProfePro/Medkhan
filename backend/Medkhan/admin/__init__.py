@@ -2,6 +2,7 @@ from sqladmin import Admin
 from fastapi import FastAPI
 
 from .doctor import DoctorAdmin
+from .checkup import CheckupAdmin
 
 
 async def setup_admin(app: FastAPI):
@@ -10,3 +11,4 @@ async def setup_admin(app: FastAPI):
     """
     admin = Admin(app, app.state.db_engine)
     admin.add_view(DoctorAdmin)
+    admin.add_view(CheckupAdmin)

@@ -1,5 +1,3 @@
-from uuid import UUID, uuid4
-
 import sqlalchemy as sa
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.sql import func
@@ -12,12 +10,8 @@ class Doctor(Base):
 
     __tablename__ = "doctor"
 
-    id: Mapped[UUID] = mapped_column(
-        sa.UUID(as_uuid=True),
-        primary_key=True,
-        unique=True,
-        index=True,
-        default=uuid4,
+    id: Mapped[int] = mapped_column(
+        sa.Integer, primary_key=True, autoincrement=True, index=True
     )
 
     created_at = sa.Column(
@@ -25,14 +19,14 @@ class Doctor(Base):
     )
     updated_at = sa.Column(sa.DateTime(timezone=True), onupdate=func.now())
 
-    full_name: Mapped[str] = mapped_column(sa.String)
+    full_name: Mapped[str] = mapped_column(sa.String(256))
     experience_years: Mapped[int] = mapped_column(sa.Integer)
     consultation_cost: Mapped[int | None] = mapped_column(sa.Integer)
-    category: Mapped[str] = mapped_column(sa.String)
-    profile_treatment: Mapped[str] = mapped_column(sa.String)
-    work_experience: Mapped[str] = mapped_column(sa.String)
-    education: Mapped[str] = mapped_column(sa.String)
+    category: Mapped[str] = mapped_column(sa.String(50))
+    profile_treatment: Mapped[str] = mapped_column(sa.Text)
+    work_experience: Mapped[str] = mapped_column(sa.Text)
+    education: Mapped[str] = mapped_column(sa.Text)
 
-    image_url: Mapped[str | None] = mapped_column(sa.String)
+    image_url: Mapped[str | None] = mapped_column(sa.String(2048))
 
-    online_booking_link: Mapped[str | None] = mapped_column(sa.String)
+    online_booking_link: Mapped[str | None] = mapped_column(sa.String(2048))

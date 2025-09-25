@@ -8,7 +8,7 @@ from Medkhan.dtos import BaseOrmModel
 class SpecialityDTO(BaseOrmModel):
     """Speciality DTO."""
 
-    id: UUID
+    id: int
 
 
 class SpecialityInputDTO(BaseModel):
