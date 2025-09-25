@@ -2,12 +2,12 @@ export interface CheckUp {
   id: number;
   name: string;
   description: string;
-  originalPrice: number;
-  discountedPrice: number;
+  original_price: number;
+  discounted_price: number;
   gender: string;
-  CheckUpType: string;
-  expiredAt: string;
-  discountPercentage: number;
+  checkup_type: string;
+  expired_at: string;
+  discount_percentage: number;
 }
 export interface CheckUpResponse {
   data: CheckUp[];

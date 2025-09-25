@@ -13,15 +13,19 @@ export const CheckUpCard = () => {
     <>
       <div className={c.grid}>
         {data.data.map((item) => {
-          switch (item.CheckUpType) {
-            case 'first':
-              return <CheckUpFirst key={item.id} {...item} />;
-            case 'seconde':
+          console.log(item.checkup_type);
+          switch (item.checkup_type) {
+            case 'FIRST':
+              return (
+                <div className={c.mainCard}>
+                  {' '}
+                  <CheckUpFirst key={item.id} {...item} />
+                </div>
+              );
+            case 'SECONDARY':
               return <CheckUpSeconde key={item.id} {...item} />;
-            case 'third':
+            case 'THIRD':
               return <CheckUpThird key={item.id} {...item} />;
-            default:
-              return <CheckUpSeconde key={item.id} {...item} />;
           }
         })}
       </div>
