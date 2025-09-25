@@ -11,10 +11,6 @@ class Departament(Base):
 
     __tablename__ = "departament"
 
-    id: Mapped[UUID] = mapped_column(
-        sa.UUID(as_uuid=True),
-        primary_key=True,
-        unique=True,
-        index=True,
-        default=uuid4,
+    id: Mapped[int] = mapped_column(
+        sa.Integer, primary_key=True, autoincrement=True, index=True
     )

@@ -8,7 +8,7 @@ from Medkhan.dtos import BaseOrmModel
 class ContactRequestDTO(BaseOrmModel):
     """ContactRequest DTO."""
 
-    id: UUID
+    id: int
 
 
 class ContactRequestInputDTO(BaseModel):

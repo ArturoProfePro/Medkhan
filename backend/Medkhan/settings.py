@@ -7,6 +7,9 @@ from yarl import URL
 
 PREFIX = "MEDKHAN_"
 
+
+BASE_DIR = pathlib.Path(__file__).parent.parent
+
 DOTENV = pathlib.Path(__file__).parent.parent / ".env"
 
 
@@ -19,26 +22,26 @@ class BaseSettings(PydanticBaseSettings):
 
 
 class DBSettings(BaseSettings):
-    """Configuration for PostgreSQL connection."""
+    """Configuration for MySQL connection."""
 
     host: str = "localhost"
-    port: int = 5432
-    user: str = "postgres"
-    password: SecretStr = SecretStr("postgres")
-    database: str = "postgres"
+    port: int = 3306
+    user: str = "root"
+    password: SecretStr = SecretStr("13132424")
+    database: str = "mysql"
     pool_size: int = 15
     echo: bool = True
 
     model_config = SettingsConfigDict(
-        env_file=".env",
-        env_prefix=f"{PREFIX}PG_",
+        env_file="DOTENV",
+        env_prefix=f"{PREFIX}_MYSQL",
     )
 
     @property
     def url(self) -> URL:
-        """Generates a URL for the PostgreSQL connection."""
+        """Generates a URL for the MySQL connection."""
         return URL.build(
-            scheme="postgresql+asyncpg",
+            scheme="mysql+aiomysql",
             host=self.host,
             port=self.port,
             user=self.user,
