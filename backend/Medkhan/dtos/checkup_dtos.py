@@ -1,3 +1,4 @@
+from datetime import datetime
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -16,6 +17,8 @@ class CheckupDTO(BaseOrmModel):
     discounted_price: int
     gender: enums.GenderEnum
     checkup_type: enums.CheckupType
+    expired_at: datetime | None
+    discount_percentage: int
 
 
 class CheckupInputDTO(BaseModel):
