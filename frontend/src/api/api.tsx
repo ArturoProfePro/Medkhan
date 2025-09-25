@@ -16,7 +16,7 @@ export const fetchDoctor = async (id: string): Promise<DoctorResponse> => {
 
 export const fetchCheckUps = async (): Promise<CheckUpResponse> => {
   const res = await axios.get<CheckUpResponse>(
-    'http://localhost:8000/api/v1/ChechUps/'
+    'http://localhost:8000/api/v1/checkups/'
   );
   return res.data;
 };
